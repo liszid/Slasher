@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.slasher.modular.NonScrollableScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/background_black">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/masked_image"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/masked"
+        android:scaleType="centerCrop"
+        android:src="@drawable/masked" />
+    <!-- Character Name -->
+    <TextView
+        android:id="@+id/character_name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="@string/character_name"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/text_white" />
+    <EditText
+        android:id="@+id/character_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Character Name"
+        android:hint="@string/character_name"
+        android:inputType="text"
+        android:textColor="@color/button_red"
+        android:background="@color/circle_color"
+        android:layout_below="@id/character_name_edit_text"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"/>
+    <!-- Character Type -->
+    <Spinner
+        android:id="@+id/character_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Survivor"
+        android:layout_below="@id/character_name_edit"
+        android:layout_marginBottom="16dp"
+        android:background="@color/background_black"
+        android:popupBackground="@color/circle_color"
+        android:textColor="@color/button_red" />
+    <!-- Stats Row -->
+    <RelativeLayout
+        android:id="@+id/charStatsRow"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_below="@id/character_type_spinner"
+        android:layout_marginTop="60dp"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/firstRowChar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!-- Health Points -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/health_point_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="@string/health"
+                    android:textColor="@color/text_white" />
+
+                <RelativeLayout
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/health_point_circle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/health"
+                        android:src="@drawable/circle_background" />
+
+                    <TextView
+                        android:id="@+id/health_point_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/_0"
+                        android:textColor="@color/text_white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/health_plus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/plust"
+                        android:textColor="@color/button_text_white" />
+
+                    <Button
+                        android:id="@+id/health_minus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/minust"
+                        android:textColor="@color/button_text_white" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Combat Points -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/combat_point_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="@string/combat"
+                    android:textColor="@color/text_white" />
+
+                <RelativeLayout
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/combat_point_circle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/combat"
+                        android:src="@drawable/circle_background" />
+
+                    <TextView
+                        android:id="@+id/combat_point_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/_0"
+                        android:textColor="@color/text_white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/combat_plus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/plust"
+                        android:textColor="@color/button_text_white" />
+
+                    <Button
+                        android:id="@+id/combat_minus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/minust"
+                        android:textColor="@color/button_text_white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondRowChar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstRowChar"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="173dp"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!-- Abstinence Points -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/abstinence_point_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="@string/abstinence"
+                    android:textColor="@color/text_white" />
+
+                <RelativeLayout
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/abstinence_point_circle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/abstinence"
+                        android:src="@drawable/circle_background" />
+
+                    <TextView
+                        android:id="@+id/abstinence_point_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/_0"
+                        android:textColor="@color/text_white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/abstinence_plus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/plust"
+                        android:textColor="@color/button_text_white" />
+
+                    <Button
+                        android:id="@+id/abstinence_minus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/minust"
+                        android:textColor="@color/button_text_white" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- Recklessness Balance -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/recklessness_balance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="@string/recklessness"
+                    android:textColor="@color/text_white" />
+
+                <RelativeLayout
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:baselineAligned="false"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/recklessness_balance_circle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/recklessness"
+                        android:src="@drawable/circle_background" />
+
+                    <TextView
+                        android:id="@+id/recklessness_balance_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/_0"
+                        android:textColor="@color/text_white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/recklessness_plus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/plust"
+                        android:textColor="@color/button_text_white" />
+
+                    <Button
+                        android:id="@+id/recklessness_minus_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/small_circle_background"
+                        android:text="@string/minust"
+                        android:textColor="@color/button_text_white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Floating Action Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="407dp"
+            android:baselineAligned="true"
+            android:gravity="end|bottom"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/roll_dice_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/small_circle_color"
+                android:src="@drawable/dice_1"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/character_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="Bookmark"
+        android:background="@color/circle_color"
+        android:hint="@string/bookmark"
+        android:inputType="text"
+        android:textColor="@color/button_red" />
+
+
+</RelativeLayout>
+
+    </FrameLayout>
+</com.example.slasher.modular.NonScrollableScrollView>

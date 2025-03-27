@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/blood_bg2">
+
+        <TextView
+            android:id="@+id/fight_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fight"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="15"/>
+
+        <Button
+            android:id="@+id/start_standard_confrontation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Standard Confrontation"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"/>
+
+        <Button
+            android:id="@+id/start_special_confrontation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Special Confrontation"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="center_horizontal"
+            android:elevation="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/fight_results_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/abstinence_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abstinence Points: "
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:shadowColor="#000000"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="15"/>
+
+                <TextView
+                    android:id="@+id/abstinence_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:shadowColor="#000000"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="15"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/abstinence_minus"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/small_circle_background"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/minust"/>
+
+                <Button
+                    android:id="@+id/abstinence_plus"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/small_circle_background"
+                    android:text="@string/plust"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/recklessness_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recklessness Balance: "
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:shadowColor="#000000"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="15"/>
+
+                <TextView
+                    android:id="@+id/recklessness_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:shadowColor="#000000"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="15"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/recklessness_minus"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/small_circle_background"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/minust"/>
+
+                <Button
+                    android:id="@+id/recklessness_plus"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/small_circle_background"
+                    android:text="@string/plust"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/roll_dice_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/dice_1"
+        android:contentDescription="Roll Dice"
+        android:backgroundTint="@color/small_circle_color"/>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <color name="background_black">#000000</color>
+    <color name="ic_launcher_background">#000000</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="button_red">#FF0000</color>
+    <color name="button_text_white">#FFFFFF</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="black">#000000</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="circle_color">#3C3C3C</color>
+    <color name="circle_border_color">#000000</color>
+    <color name="small_circle_color">#FF0000</color>
+    <color name="small_circle_border_color">#000000</color>
+    <color name="red">#FF0000</color>
+</resources>
+

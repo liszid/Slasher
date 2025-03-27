@@ -1,0 +1,6 @@
+<resources>
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+</resources>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/blood_bg2">
+
+        <TextView
+            android:id="@+id/settings_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="16dp"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="15"/>
+
+        <TextView
+            android:id="@+id/round_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Rounds: 0"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/settings_label"
+            android:layout_marginBottom="16dp"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="15"/>
+
+        <Button
+            android:id="@+id/game_end_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game End"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/round_label"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"/>
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/game_end_button"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"/>
+    </RelativeLayout>

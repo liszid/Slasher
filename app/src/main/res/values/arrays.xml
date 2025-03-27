@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="character_types">
+        <item>Killer</item>
+        <item>Survivor</item>
+    </string-array>
+</resources>
