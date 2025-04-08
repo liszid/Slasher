@@ -384,7 +384,8 @@
         android:autofillHints="Bookmark"
         android:background="@color/circle_color"
         android:hint="@string/bookmark"
-        android:inputType="text"
+        android:inputType="number"
+        android:digits="0123456789"
         android:textColor="@color/button_red" />
 
 

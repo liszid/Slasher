@@ -1,27 +1,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_character"
+        android:background="@color/button_red"
         android:icon="@drawable/ic_character"
-        android:textColor="@color/button_red"
         android:title="@string/character" />
     <item
         android:id="@+id/navigation_fight"
         android:icon="@drawable/ic_fight"
-        android:textColor="@color/button_red"
+        android:background="@color/button_red"
         android:title="@string/fight" />
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/ic_map"
+        android:background="@color/button_red"
+        android:title="@string/map" />
     <item
         android:id="@+id/navigation_inventory"
         android:icon="@drawable/ic_inventory"
-        android:textColor="@color/button_red"
+        android:background="@color/button_red"
         android:title="@string/inventory" />
     <item
         android:id="@+id/navigation_achievements"
         android:icon="@drawable/ic_achievements"
-        android:textColor="@color/button_red"
+        android:background="@color/button_red"
         android:title="@string/achievements" />
     <item
         android:id="@+id/navigation_settings"
         android:icon="@drawable/ic_settings"
-        android:textColor="@color/button_red"
+        android:background="@color/button_red"
         android:title="@string/settings" />
 </menu>

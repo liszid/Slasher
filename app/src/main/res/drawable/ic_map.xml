@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Bal oldali paralelogramma -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M2,4 L9,1 L9,24 L2,20 Z" />
+
+    <!-- Középső mélyebb paralelogramma -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M10,1 L15,6 L15,18 L10,24 Z" />
+
+    <!-- Jobb oldali paralelogramma -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M15,6 L22,4 L22,20 L15,18 Z" />
+</vector>

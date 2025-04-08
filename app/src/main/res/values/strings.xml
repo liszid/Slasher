@@ -21,4 +21,7 @@
     <string name="end_of_round">End of Round</string>
     <string name="reset">Reset</string>
     <string name="bookmark">Bookmark</string>
+    <string name="map">Map</string>
+    <string name="open">Open Navigation</string>
+    <string name="close">Close Navigation</string>
 </resources>

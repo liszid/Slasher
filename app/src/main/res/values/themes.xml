@@ -11,4 +11,8 @@
         <item name="android:background">@color/button_red</item>
         <item name="android:textColor">@color/button_text_white</item>
     </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#FF0000</item> <!-- Piros háttér -->
+    </style>
 </resources>

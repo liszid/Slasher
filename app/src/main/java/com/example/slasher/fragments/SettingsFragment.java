@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import com.example.slasher.R;
 import com.example.slasher.modular.PreferencesManager;
 
+import java.util.HashMap;
+
 public class SettingsFragment extends Fragment {
 
     private PreferencesManager preferencesManager;
@@ -136,6 +138,7 @@ public class SettingsFragment extends Fragment {
         preferencesManager.saveString("character_type", "Survivor");
         preferencesManager.removeKey("inventory");
         preferencesManager.removeKey("achievements");
+        preferencesManager.saveMap("game_map", new HashMap<>());
         preferencesManager.saveInt("game_end_count", 0);
     }
 

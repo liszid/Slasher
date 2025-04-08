@@ -27,6 +27,7 @@ public class InventoryFragment extends Fragment {
     private List<String> inventoryItems;
     private Map<String, Integer> itemQuantities;
     private String[] predefinedItems = {
+            "Desk lamp - 1 CP",
             "Baseball bat - 1 CP",
             "Kitchen knife - 1 CP",
             "Chainsaw - 3 CP",

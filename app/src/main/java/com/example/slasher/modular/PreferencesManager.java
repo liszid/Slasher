@@ -11,7 +11,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PreferencesManager {
@@ -112,6 +114,48 @@ public class PreferencesManager {
         }
         return inventory;
     }
+
+    // Térkép mentése JSON-ként
+    public void saveMap(String key, Map<Integer, List<Integer>> mapData) {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            for (Map.Entry<Integer, List<Integer>> entry : mapData.entrySet()) {
+                JSONArray jsonArray = new JSONArray(entry.getValue());
+                jsonObject.put(String.valueOf(entry.getKey()), jsonArray);
+            }
+        } catch (JSONException e) {
+            //noinspection CallToPrintStackTrace
+            e.printStackTrace();
+        }
+        editor.putString(key, jsonObject.toString());
+        editor.apply();
+    }
+
+    // Térkép visszaállítása JSON-ból
+    public Map<Integer, List<Integer>> getMap(String key) {
+        Map<Integer, List<Integer>> mapData = new HashMap<>();
+        String jsonString = sharedPreferences.getString(key, "{}");
+        try {
+            JSONObject jsonObject = new JSONObject(jsonString);
+            JSONArray keys = jsonObject.names();
+            if (keys != null) {
+                for (int i = 0; i < keys.length(); ++i) {
+                    int stepKey = Integer.parseInt(keys.getString(i));
+                    JSONArray jsonArray = jsonObject.getJSONArray(keys.getString(i));
+                    List<Integer> steps = new ArrayList<>();
+                    for (int j = 0; j < jsonArray.length(); j++) {
+                        steps.add(jsonArray.getInt(j));
+                    }
+                    mapData.put(stepKey, steps);
+                }
+            }
+        } catch (JSONException e) {
+            //noinspection CallToPrintStackTrace
+            e.printStackTrace();
+        }
+        return mapData;
+    }
+
 
     // Törlés egy adott kulcs alapján
     public void removeKey(String key) {
